@@ -8,7 +8,7 @@
 // Example 1
 
 function calculate(num1, num2, operation) {
-    
+    return operation(num1, num2); 
      
 }
 
