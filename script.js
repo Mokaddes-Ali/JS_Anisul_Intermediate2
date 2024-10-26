@@ -44,3 +44,157 @@ result = calculate (5, 4 , divided);
 console.log(result);
 
 
+//forEach() Method
+
+const persons = ['John', 'Doe', 'Jane', 'Doe'];
+
+for (let i = 0; i < persons.length; i++) {
+    console.log(persons[i]);
+}
+
+persons.forEach((person) => {
+    console.log(person);
+});
+
+
+//example 2
+
+const numbers = [1, 2, 3, 4, 5];
+
+const square = [];
+
+for (let i = 0; i < numbers.length; i++) {
+    square.push(numbers[i] * numbers[i]);
+}
+
+console.log(square);
+
+const numbers1 = [1, 2, 3, 4, 5];
+
+const square1 = [];
+
+numbers1.forEach((number) => {
+    square1.push(number * number);
+}
+);
+
+console.log(square1);
+
+//map() Method
+
+const numbers2 = [1, 2, 3, 4, 5];
+
+const square2 = numbers2.map((number) => {
+    return number * number;
+}
+);
+
+console.log(square2);
+
+//example map more
+
+const persons1 = [
+    { name: 'John', age: 30 },
+    { name: 'Doe', age: 25 },
+    { name: 'Jane', age: 22 }
+];
+
+const names = persons1.map((person) => {
+    return person.name;
+}
+);
+
+console.log(names);
+
+//filter() Method
+
+const products = [
+    { name: 'laptop', price: 1000 },
+    { name: 'desktop', price: 1500 },
+    { name: 'phone', price: 500 }
+];
+
+const filteredProducts = products.filter((product) => {
+    return product.price >= 1000;
+}
+);
+
+console.log(filteredProducts);
+
+// filter && map
+
+const products1 = [
+    { name: 'laptop', price: 1000 },
+    { name: 'desktop', price: 1500 },
+    { name: 'phone', price: 500 }
+];
+
+const filteredProducts1 = products1.filter((product) => {
+    return product.price >= 1000;
+}
+).map((product) => {
+    return product.name;
+}
+);
+
+console.log(filteredProducts1);
+
+// search by filter name
+
+const products2 = [
+    { name: 'laptop', price: 1000 },
+    { name: 'desktop', price: 1500 },
+    { name: 'phone', price: 500 }
+];
+
+const search = 'phone';
+
+const filteredProducts2 = products2.filter((product) => {
+    return product.name.includes(search);
+}
+);
+
+console.log(filteredProducts2);
+
+
+// search by lower and upper case letters
+
+const products3 = [
+    { name: 'laptop', price: 1000 },
+    { name: 'desktop', price: 1500 },
+    { name: 'phone', price: 500 }
+];
+
+const search1 = 'Phone';
+
+const filteredProducts3 = products3.filter((product) => {
+    return product.name.toLowerCase().includes(search1.toLowerCase());
+}
+);
+
+console.log(filteredProducts3);
+
+//reduce() Method
+
+const numbers3 = [1, 2, 3, 4, 5];
+
+const sum = numbers3.reduce((accumulator, number) => {
+    return accumulator + number;
+}
+);
+
+console.log(sum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
