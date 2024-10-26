@@ -7,8 +7,10 @@
 
 // Example 1
 
-function calculate(num1, num2, operation) {
-    return operation(num1, num2); 
+
+// callback function && higher order function
+const calculate = (num1, num2, operation) => {  //calaute is a higher order function
+    return operation(num1, num2);  //opration is a callback function
      
 }
 
@@ -16,17 +18,29 @@ const add = (num1, num2) => {
     return num1 + num2;
 }
 
-const subtract = (num1, num2) => {
-    return num1 - num2;
+const sub = (num1, num2) => {
+    return num1 + num2;
 }
+
 
 const multiply = (num1, num2) => {
-    return num1 * num2;
+    return num1 + num2;
 }
 
-const divide = (num1, num2) => {
-    return num1 / num2;
+const divided = (num1, num2) => {
+    return num1 + num2;
 }
 
-const result = calculate (5, 4 , add);
+let result = calculate (5, 4 , add);
+console.log(result);
+
+result = calculate (500, 45 , sub);
+console.log(result);
+
+result = calculate (5, 4 , multiply);
+console.log(result);
+
+result = calculate (5, 4 , divided);
+console.log(result);
+
 
