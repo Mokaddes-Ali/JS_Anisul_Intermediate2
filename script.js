@@ -174,20 +174,31 @@ const filteredProducts3 = products3.filter((product) => {
 
 console.log(filteredProducts3);
 
-//reduce() Method
+// //reduce() Method
 
-const numbers3 = [1, 2, 3, 4, 5];
+// const numbers3 = [1, 2, 3, 4, 5];
 
-//accumulator starts from 0 initial value
-const sum = numbers3.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-}
-);
+// //accumulator starts from 0 initial value
+// const sum = numbers3.reduce((accumulator, currentValue) => {
+//     return accumulator += currentValue;
+//     //carrent value is object one by one
+// }
+// );
 
-console.log(sum);
+// console.log(sum);
 
+// //example 2
 
+const cartProducts = [
+    {id:1, name: 'laptop', price: 1000 },
+    {id:2, name: 'desktop', price: 1500 },
+    { id:3, name: 'phone', price: 500 }
+]
 
+const totalPrice = cartProducts
+.map(cartItem => cartItem.price)
+.reduce((accumulator, currentValue) => 
+    accumulator += currentValue);
 
 
 
