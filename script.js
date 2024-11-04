@@ -240,6 +240,42 @@ const cartProducts = [
 
    ]
 
+// sort by name   accending order
+
+// const sortedByName = cartProducts.sort((a, b) => {
+//     return a.name.localeCompare(b.name);  //accending order
+// }
+// );
+
+// console.log(sortedByName);
+
+// sort by name   decending order
+
+const sortedByName = cartProducts.sort((a, b) => {
+    return b.name.localeCompare(a.name);  //decending order
+}
+);
+
+console.log(sortedByName);
+
+// sort by price   accending order
+
+const sortedByPrice = cartProducts.sort((a, b) => {
+    return a.price - b.price;  //accending order
+}
+);
+
+console.log(sortedByPrice);
+
+// sort by price   decending order
+
+const sortedByPrice1 = cartProducts.sort((a, b) => {
+    return b.price - a.price;  //decending order
+}
+);
+
+console.log(sortedByPrice1);
+
 
 
 
