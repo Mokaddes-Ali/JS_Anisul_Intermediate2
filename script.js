@@ -189,11 +189,11 @@
 
 // //example 2
 
-const cartProducts = [
-    {id:1, name: 'laptop', price: 1000 },
-    {id:2, name: 'desktop', price: 1500 },
-    { id:3, name: 'phone', price: 500 }
-]
+// const cartProducts = [
+//     {id:1, name: 'laptop', price: 1000 },
+//     {id:2, name: 'desktop', price: 1500 },
+//     { id:3, name: 'phone', price: 500 }
+// ]
 
 // const totalPrice = cartProducts
 // .map(cartItem => cartItem.price)
@@ -227,6 +227,18 @@ const cartProducts = [
 
 // console.log(allPrice);
 
+
+
+// sorting products based ob name , createdAt and price
+
+const cartProducts = [
+    {id:1, name: 'laptop', price: 1000, creatAt: new Date('2021-09-01') },
+    {id:2, name: 'desktop', price: 1500, creatAt: new Date('2021-09-02') },
+    { id:3, name: 'phone', price: 500, creatAt: new Date('2021-09-03') },
+    { id:4, name: 'tablet', price: 2000, creatAt: new Date('2021-09-04') },
+    { id:5, name: 'watch', price: 2500, creatAt: new Date('2021-09-05') }
+
+   ]
 
 
 
