@@ -232,7 +232,7 @@
 // sorting products based ob name , createdAt and price
 
 const cartProducts = [
-    {id:1, name: 'laptop', price: 1000, creatAt: new Date('2021-09-01') },
+    {id:1, name: 'laptop', price: 1000, creatAt: new Date('2022-09-01') },
     {id:2, name: 'desktop', price: 1500, creatAt: new Date('2021-09-02') },
     { id:3, name: 'phone', price: 500, creatAt: new Date('2021-09-03') },
     { id:4, name: 'tablet', price: 2000, creatAt: new Date('2021-09-04') },
@@ -251,30 +251,39 @@ const cartProducts = [
 
 // sort by name   decending order
 
-const sortedByName = cartProducts.sort((a, b) => {
-    return b.name.localeCompare(a.name);  //decending order
+// const sortedByName = cartProducts.sort((a, b) => {
+//     return b.name.localeCompare(a.name);  //decending order
+// }
+// );
+
+// console.log(sortedByName);
+
+// // sort by price   accending order
+
+// const sortedByPrice = cartProducts.sort((a, b) => {
+//     return a.price - b.price;  //accending order
+// }
+// );
+
+// console.log(sortedByPrice);
+
+// // sort by price   decending order
+
+// const sortedByPrice1 = cartProducts.sort((a, b) => {
+//     return b.price - a.price;  //decending order
+// }
+// );
+
+// console.log(sortedByPrice1);
+
+// // sort by createdAt   accending order
+
+const sortedByCreatedAt = cartProducts.sort((a, b) => {
+    return new Date(a.creatAt) - new Date(b.creatAt);  //accending order
 }
 );
 
-console.log(sortedByName);
-
-// sort by price   accending order
-
-const sortedByPrice = cartProducts.sort((a, b) => {
-    return a.price - b.price;  //accending order
-}
-);
-
-console.log(sortedByPrice);
-
-// sort by price   decending order
-
-const sortedByPrice1 = cartProducts.sort((a, b) => {
-    return b.price - a.price;  //decending order
-}
-);
-
-console.log(sortedByPrice1);
+console.log(sortedByCreatedAt);
 
 
 
