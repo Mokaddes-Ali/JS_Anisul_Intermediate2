@@ -220,14 +220,12 @@ const cartProducts = [
 
 
 
-
-
 // //every(boolean value) => all element is true
 // every is oposite of some
 
-const allPrice = cartProducts.every(cartItem => cartItem.price > 2000);
+// const allPrice = cartProducts.every(cartItem => cartItem.price > 2000);
 
-console.log(allPrice);
+// console.log(allPrice);
 
 
 
