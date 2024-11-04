@@ -195,12 +195,40 @@ const cartProducts = [
     { id:3, name: 'phone', price: 500 }
 ]
 
-const totalPrice = cartProducts
-.map(cartItem => cartItem.price)
-.reduce((accumulator, currentValue) => 
-    accumulator += currentValue, 0);
+// const totalPrice = cartProducts
+// .map(cartItem => cartItem.price)
+// .reduce((accumulator, currentValue) => 
+//     accumulator += currentValue, 0);
 
-console.log(totalPrice);
+// console.log(`You have need pay:${totalPrice}`);
+
+
+// some(boolean value true or false) => atleast one element is true
+
+// some in use for check the condition is true or false in 
+// any condition or range of condition such as 1 to 10 or 1 to 100
+// if any condition is true then return true otherwise return false
+
+
+// variable name with has a value ,, is the good practise
+
+// at least one item price is greater than 1000
+
+// const hasPrice = cartProducts.some(cartItem => cartItem.price > 1000);
+
+// console.log(hasPrice);
+
+
+
+
+
+// //every(boolean value) => all element is true
+// every is oposite of some
+
+const allPrice = cartProducts.every(cartItem => cartItem.price > 2000);
+
+console.log(allPrice);
+
 
 
 
