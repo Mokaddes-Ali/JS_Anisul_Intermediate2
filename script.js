@@ -178,12 +178,15 @@ console.log(filteredProducts3);
 
 const numbers3 = [1, 2, 3, 4, 5];
 
-const sum = numbers3.reduce((accumulator, number) => {
-    return accumulator + number;
+//accumulator starts from 0 initial value
+const sum = numbers3.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
 }
 );
 
 console.log(sum);
+
+
 
 
 
