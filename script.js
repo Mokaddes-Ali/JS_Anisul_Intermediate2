@@ -1,178 +1,178 @@
-// Higher Order Function
-// A function that takes another function as an argument or returns a function as a result is called a higher order function.
+// // Higher Order Function
+// // A function that takes another function as an argument or returns a function as a result is called a higher order function.
 
-//Callback Function
+// //Callback Function
 
-// A callback function is a function that is passed as an argument to another function.
+// // A callback function is a function that is passed as an argument to another function.
 
-// Example 1
+// // Example 1
 
 
-// callback function && higher order function
-const calculate = (num1, num2, operation) => {  //calaute is a higher order function
-    return operation(num1, num2);  //opration is a callback function
+// // callback function && higher order function
+// const calculate = (num1, num2, operation) => {  //calaute is a higher order function
+//     return operation(num1, num2);  //opration is a callback function
      
-}
+// }
 
-const add = (num1, num2) => {
-    return num1 + num2;
-}
+// const add = (num1, num2) => {
+//     return num1 + num2;
+// }
 
-const sub = (num1, num2) => {
-    return num1 + num2;
-}
-
-
-const multiply = (num1, num2) => {
-    return num1 + num2;
-}
-
-const divided = (num1, num2) => {
-    return num1 + num2;
-}
-
-let result = calculate (5, 4 , add);
-console.log(result);
-
-result = calculate (500, 45 , sub);
-console.log(result);
-
-result = calculate (5, 4 , multiply);
-console.log(result);
-
-result = calculate (5, 4 , divided);
-console.log(result);
+// const sub = (num1, num2) => {
+//     return num1 + num2;
+// }
 
 
-//forEach() Method
+// const multiply = (num1, num2) => {
+//     return num1 + num2;
+// }
 
-const persons = ['John', 'Doe', 'Jane', 'Doe'];
+// const divided = (num1, num2) => {
+//     return num1 + num2;
+// }
 
-for (let i = 0; i < persons.length; i++) {
-    console.log(persons[i]);
-}
+// let result = calculate (5, 4 , add);
+// console.log(result);
 
-persons.forEach((person) => {
-    console.log(person);
-});
+// result = calculate (500, 45 , sub);
+// console.log(result);
 
+// result = calculate (5, 4 , multiply);
+// console.log(result);
 
-//example 2
-
-const numbers = [1, 2, 3, 4, 5];
-
-const square = [];
-
-for (let i = 0; i < numbers.length; i++) {
-    square.push(numbers[i] * numbers[i]);
-}
-
-console.log(square);
-
-const numbers1 = [1, 2, 3, 4, 5];
-
-const square1 = [];
-
-numbers1.forEach((number) => {
-    square1.push(number * number);
-}
-);
-
-console.log(square1);
-
-//map() Method
-
-const numbers2 = [1, 2, 3, 4, 5];
-
-const square2 = numbers2.map((number) => {
-    return number * number;
-}
-);
-
-console.log(square2);
-
-//example map more
-
-const persons1 = [
-    { name: 'John', age: 30 },
-    { name: 'Doe', age: 25 },
-    { name: 'Jane', age: 22 }
-];
-
-const names = persons1.map((person) => {
-    return person.name;
-}
-);
-
-console.log(names);
-
-//filter() Method
-
-const products = [
-    { name: 'laptop', price: 1000 },
-    { name: 'desktop', price: 1500 },
-    { name: 'phone', price: 500 }
-];
-
-const filteredProducts = products.filter((product) => {
-    return product.price >= 1000;
-}
-);
-
-console.log(filteredProducts);
-
-// filter && map
-
-const products1 = [
-    { name: 'laptop', price: 1000 },
-    { name: 'desktop', price: 1500 },
-    { name: 'phone', price: 500 }
-];
-
-const filteredProducts1 = products1.filter((product) => {
-    return product.price >= 1000;
-}
-).map((product) => {
-    return product.name;
-}
-);
-
-console.log(filteredProducts1);
-
-// search by filter name
-
-const products2 = [
-    { name: 'laptop', price: 1000 },
-    { name: 'desktop', price: 1500 },
-    { name: 'phone', price: 500 }
-];
-
-const search = 'phone';
-
-const filteredProducts2 = products2.filter((product) => {
-    return product.name.includes(search);
-}
-);
-
-console.log(filteredProducts2);
+// result = calculate (5, 4 , divided);
+// console.log(result);
 
 
-// search by lower and upper case letters
+// //forEach() Method
 
-const products3 = [
-    { name: 'laptop', price: 1000 },
-    { name: 'desktop', price: 1500 },
-    { name: 'phone', price: 500 }
-];
+// const persons = ['John', 'Doe', 'Jane', 'Doe'];
 
-const search1 = 'Phone';
+// for (let i = 0; i < persons.length; i++) {
+//     console.log(persons[i]);
+// }
 
-const filteredProducts3 = products3.filter((product) => {
-    return product.name.toLowerCase().includes(search1.toLowerCase());
-}
-);
+// persons.forEach((person) => {
+//     console.log(person);
+// });
 
-console.log(filteredProducts3);
+
+// //example 2
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const square = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//     square.push(numbers[i] * numbers[i]);
+// }
+
+// console.log(square);
+
+// const numbers1 = [1, 2, 3, 4, 5];
+
+// const square1 = [];
+
+// numbers1.forEach((number) => {
+//     square1.push(number * number);
+// }
+// );
+
+// console.log(square1);
+
+// //map() Method
+
+// const numbers2 = [1, 2, 3, 4, 5];
+
+// const square2 = numbers2.map((number) => {
+//     return number * number;
+// }
+// );
+
+// console.log(square2);
+
+// //example map more
+
+// const persons1 = [
+//     { name: 'John', age: 30 },
+//     { name: 'Doe', age: 25 },
+//     { name: 'Jane', age: 22 }
+// ];
+
+// const names = persons1.map((person) => {
+//     return person.name;
+// }
+// );
+
+// console.log(names);
+
+// //filter() Method
+
+// const products = [
+//     { name: 'laptop', price: 1000 },
+//     { name: 'desktop', price: 1500 },
+//     { name: 'phone', price: 500 }
+// ];
+
+// const filteredProducts = products.filter((product) => {
+//     return product.price >= 1000;
+// }
+// );
+
+// console.log(filteredProducts);
+
+// // filter && map
+
+// const products1 = [
+//     { name: 'laptop', price: 1000 },
+//     { name: 'desktop', price: 1500 },
+//     { name: 'phone', price: 500 }
+// ];
+
+// const filteredProducts1 = products1.filter((product) => {
+//     return product.price >= 1000;
+// }
+// ).map((product) => {
+//     return product.name;
+// }
+// );
+
+// console.log(filteredProducts1);
+
+// // search by filter name
+
+// const products2 = [
+//     { name: 'laptop', price: 1000 },
+//     { name: 'desktop', price: 1500 },
+//     { name: 'phone', price: 500 }
+// ];
+
+// const search = 'phone';
+
+// const filteredProducts2 = products2.filter((product) => {
+//     return product.name.includes(search);
+// }
+// );
+
+// console.log(filteredProducts2);
+
+
+// // search by lower and upper case letters
+
+// const products3 = [
+//     { name: 'laptop', price: 1000 },
+//     { name: 'desktop', price: 1500 },
+//     { name: 'phone', price: 500 }
+// ];
+
+// const search1 = 'Phone';
+
+// const filteredProducts3 = products3.filter((product) => {
+//     return product.name.toLowerCase().includes(search1.toLowerCase());
+// }
+// );
+
+// console.log(filteredProducts3);
 
 // //reduce() Method
 
@@ -198,7 +198,9 @@ const cartProducts = [
 const totalPrice = cartProducts
 .map(cartItem => cartItem.price)
 .reduce((accumulator, currentValue) => 
-    accumulator += currentValue);
+    accumulator += currentValue, 0);
+
+console.log(totalPrice);
 
 
 
